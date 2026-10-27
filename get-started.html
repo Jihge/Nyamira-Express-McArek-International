@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrange a Delivery | Nyamira Express (McArek International)</title>
+    <meta name="description" content="Start arranging the sending or receiving of goods with Nyamira Express (McArek International)." />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="styles.css?v=8" />
+  </head>
+  <body class="get-started-site">
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap" aria-label="Nyamira Express brand">
+          <div class="logo-mark" aria-hidden="true"><img src="images/logo-cropped.png" alt="" /></div>
+          <div class="brand-copy"><div class="brand-name">Nyamira Express (McArek International)</div></div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="tracking.html">Tracking</a>
+          <a href="coverage.html">Coverage</a>
+          <a href="about.html">About Us</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <div class="action-group">
+          <a class="nav-cta dark" href="get-started.html" aria-current="page">Get Started</a>
+          <a class="nav-cta solid" href="login.html">Login</a>
+        </div>
+      </header>
+
+      <main class="page-main quote-page get-started-page">
+        <nav class="workflow-nav nav nav-pills nav-fill" aria-label="Delivery process">
+          <button class="nav-link active" id="delivery-request-tab" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#delivery-request-screen" aria-controls="delivery-request-screen" aria-selected="true">
+            <span class="workflow-nav-number">1</span>
+            <span><strong>Delivery request</strong><small>Share shipment details</small></span>
+          </button>
+          <button class="nav-link" id="booking-followup-tab" type="button" role="tab" data-bs-toggle="tab" data-bs-target="#booking-followup-screen" aria-controls="booking-followup-screen" aria-selected="false" disabled>
+            <span class="workflow-nav-number">2</span>
+            <span><strong>Booking details</strong><small>Accept price and pickup</small></span>
+          </button>
+        </nav>
+
+        <div class="tab-content workflow-content" id="delivery-process-content">
+        <div class="tab-pane fade show active" id="delivery-request-screen" role="tabpanel" aria-labelledby="delivery-request-tab" tabindex="0">
+          <section class="quote-intro">
+            <span class="eyebrow">SEND OR RECEIVE GOODS</span>
+            <h1>Arrange a delivery</h1>
+            <p>Tell us whether you are sending or receiving goods and share a few details. Our team will contact you to coordinate the delivery.</p>
+          </section>
+
+          <aside class="quote-guidance">
+            <span aria-hidden="true">↗</span>
+            <p><strong>Start your delivery here.</strong> Share the route, contacts, and parcel details so our team can help coordinate sending or receiving your goods.</p>
+          </aside>
+
+          <ol class="shipment-progress" aria-label="Shipment request steps">
+            <li class="active" aria-current="step"><span>1</span><span>Delivery details</span></li>
+            <li><span>2</span><span>Parcel details</span></li>
+            <li><span>3</span><span>Review &amp; send</span></li>
+          </ol>
+
+          <form class="quote-form shipment-form card border-0 shadow-sm" id="shipment-request-form" novalidate>
+            <section class="shipment-step" data-step="0" aria-labelledby="shipment-step-one">
+              <h2 id="shipment-step-one" tabindex="-1">Where should we collect and deliver?</h2>
+              <p class="shipment-step-hint">Start with the pickup and delivery areas, then add a contact for each end.</p>
+              <div class="shipment-fields">
+                <div class="form-row shipment-full-field">
+                  <label for="movement-type">What are you arranging? *</label>
+                  <select class="form-select" id="movement-type" name="movementType" required>
+                    <option value="sending">I am sending goods</option>
+                    <option value="receiving">I am receiving goods</option>
+                  </select>
+                </div>
+              </div>
+              <div class="shipment-route-fields">
+                <div class="form-row">
+                  <label for="pickup-area">Pickup area * <span>Suburb or town</span></label>
+                  <input class="form-control" id="pickup-area" name="pickupArea" type="text" autocomplete="address-level2" maxlength="120" placeholder="e.g. Kempton Park" required />
+                </div>
+                <div class="form-row">
+                  <label for="delivery-area">Delivery area * <span>Suburb or town</span></label>
+                  <input class="form-control" id="delivery-area" name="deliveryArea" type="text" autocomplete="off" maxlength="120" placeholder="e.g. Sandton" required />
+                </div>
+              </div>
+              <div class="shipment-columns">
+                <fieldset class="shipment-party">
+                  <legend>Sender</legend>
+                  <div class="form-row">
+                    <label for="sender-name">Full name *</label>
+                    <input class="form-control" id="sender-name" name="senderName" type="text" autocomplete="name" maxlength="120" required />
+                  </div>
+                  <div class="form-row">
+                    <label for="sender-phone">Phone number *</label>
+                    <input class="form-control" id="sender-phone" name="senderPhone" type="tel" autocomplete="tel" maxlength="40" required />
+                  </div>
+                </fieldset>
+
+                <fieldset class="shipment-party">
+                  <legend>Recipient</legend>
+                  <div class="form-row">
+                    <label for="recipient-name">Full name *</label>
+                    <input class="form-control" id="recipient-name" name="recipientName" type="text" autocomplete="off" maxlength="120" required />
+                  </div>
+                  <div class="form-row">
+                    <label for="recipient-phone">Phone number *</label>
+                    <input class="form-control" id="recipient-phone" name="recipientPhone" type="tel" autocomplete="off" maxlength="40" required />
+                  </div>
+                </fieldset>
+              </div>
+            </section>
+
+            <section class="shipment-step" data-step="1" aria-labelledby="shipment-step-two" hidden>
+              <h2 id="shipment-step-two" tabindex="-1">What are you sending?</h2>
+              <p class="shipment-step-hint">Add a description and parcel count. You can leave the approximate weight blank if you are not sure.</p>
+              <div class="shipment-fields shipment-parcel-fields">
+                <div class="form-row shipment-full-field">
+                  <label for="parcel-category">What are you sending? *</label>
+                  <select class="form-select" id="parcel-category" name="parcelCategory" required>
+                    <option value="">Select a goods category</option>
+                    <option value="Documents">Documents</option>
+                    <option value="Clothing and textiles">Clothing and textiles</option>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Household goods">Household goods</option>
+                    <option value="Furniture and bulky items">Furniture and bulky items</option>
+                    <option value="Food and perishables">Food and perishables</option>
+                    <option value="Business and commercial goods">Business and commercial goods</option>
+                    <option value="Vehicle parts and accessories">Vehicle parts and accessories</option>
+                    <option value="Personal effects">Personal effects</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-row shipment-full-field" id="parcel-details-field" hidden>
+                  <label for="parcel-details">Please describe the goods *</label>
+                  <input class="form-control" id="parcel-details" name="parcelDetails" type="text" maxlength="160" placeholder="Describe the items being transported" />
+                </div>
+                <div class="form-row">
+                  <label for="parcel-pieces">Number of parcels *</label>
+                  <input class="form-control" id="parcel-pieces" name="parcelPieces" type="number" min="1" max="99" step="1" value="1" required />
+                </div>
+                <div class="form-row">
+                  <label for="parcel-weight">Approximate weight <span>Optional · kg</span></label>
+                  <input class="form-control" id="parcel-weight" name="parcelWeight" type="number" min="0.1" max="1000" step="0.1" placeholder="e.g. 2.5" />
+                </div>
+              </div>
+            </section>
+
+            <section class="shipment-step" data-step="2" aria-labelledby="shipment-step-three" hidden>
+              <h2 id="shipment-step-three" tabindex="-1">Review your delivery details</h2>
+              <p class="shipment-step-hint">Check the information before sending your delivery request to our team.</p>
+              <dl class="shipment-summary" id="shipment-summary"></dl>
+              <div class="shipment-notice">
+                <strong>What happens next?</strong>
+                <p>Our team will contact you to coordinate the sending or receiving of your goods. Submitting this request starts the process but does not confirm a booking.</p>
+              </div>
+            </section>
+
+            <div class="shipment-form-actions">
+              <button class="btn btn-outline-secondary secondary-btn large-btn" type="button" id="shipment-back" hidden>Back</button>
+              <button class="btn btn-primary primary-btn large-btn" type="button" id="shipment-next">Continue</button>
+              <button class="btn btn-primary primary-btn large-btn" type="submit" id="shipment-submit" hidden>Start delivery request</button>
+            </div>
+            <p class="shipment-status" id="shipment-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <section class="tab-pane fade shipment-form booking-followup card border-0 shadow-sm" id="booking-followup-screen" role="tabpanel" aria-labelledby="booking-followup-tab" tabindex="0">
+          <span class="eyebrow">BOOKING FOLLOW-UP</span>
+          <h1 id="booking-followup-title" tabindex="-1">Continue with your booking</h1>
+          <p class="shipment-step-hint">Enter the reference and price Nyamira Express sent you, then choose your preferred pickup time.</p>
+
+          <p class="shipment-status" id="delivery-request-status" role="status" aria-live="polite"></p>
+
+          <aside class="booking-followup-notice">
+            <strong>Your booking is confirmed after our team replies.</strong>
+            <p>Sending your acceptance asks Nyamira Express to proceed. Your booking is confirmed only after the team verifies availability and replies with confirmation.</p>
+          </aside>
+
+          <form id="booking-followup-form">
+            <div class="shipment-fields booking-followup-fields">
+              <div class="form-row">
+                <label for="booking-reference">Delivery request reference *</label>
+                <input class="form-control" id="booking-reference" name="bookingReference" type="text" maxlength="24" placeholder="Generated from your delivery request" autocomplete="off" readonly required />
+              </div>
+              <div class="form-row">
+                <label for="booking-price">Agreed price as quoted *</label>
+                <input class="form-control" id="booking-price" name="bookingPrice" type="text" maxlength="80" placeholder="Enter the amount and currency you were quoted" required />
+              </div>
+              <div class="form-row">
+                <label for="booking-date">Preferred pickup date *</label>
+                <input class="form-control" id="booking-date" name="bookingDate" type="date" required />
+              </div>
+              <div class="form-row">
+                <label for="booking-time">Preferred pickup time *</label>
+                <select class="form-select" id="booking-time" name="bookingTime" required>
+                  <option value="">Choose a preferred time</option>
+                  <option value="Morning">Morning</option>
+                  <option value="Midday">Midday</option>
+                  <option value="Afternoon">Afternoon</option>
+                  <option value="Any time">Any time that day</option>
+                </select>
+              </div>
+            </div>
+            <label class="booking-acceptance" for="booking-accept-price">
+              <input id="booking-accept-price" name="acceptPrice" type="checkbox" required />
+              <span>I accept the quoted price and ask Nyamira Express to proceed with arranging this booking.</span>
+            </label>
+            <div class="shipment-form-actions">
+              <button class="btn btn-outline-secondary secondary-btn large-btn" type="button" id="back-to-delivery-request">Back to delivery details</button>
+              <button class="btn btn-primary primary-btn large-btn" type="submit">Send booking confirmation request</button>
+            </div>
+            <p class="shipment-status" id="booking-followup-status" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+        </div>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="brand-wrap footer-brand-wrap">
+              <div class="logo-mark" aria-hidden="true"><img src="images/logo-cropped.png" alt="" /></div>
+              <div class="brand-copy footer-copy"><div class="brand-name">Nyamira Express (McArek International)</div></div>
+            </div>
+            <p>Fast, dependable delivery for businesses and households.</p>
+          </div>
+          <div class="footer-column"><h5>Contact</h5><ul><li>7 Duvenhage Avenue, Edleen, Kempton Park</li><li>074 444 0102</li><li>info@nyamilaexpress.co.za</li></ul></div>
+        </div>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="get-started.js?v=10"></script>
+  </body>
+</html>

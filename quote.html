@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get a Quote | Nyamira Express (McArek International)</title>
+    <meta name="description" content="Request a courier quote from Nyamira Express (McArek International)." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap" aria-label="Nyamira Express brand">
+          <div class="logo-mark" aria-hidden="true"><img src="images/logo-cropped.png" alt="" /></div>
+          <div class="brand-copy">
+            <div class="brand-name">Nyamira Express (McArek International)</div>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="tracking.html">Tracking</a>
+          <a href="coverage.html">Coverage</a>
+          <a href="about.html">About Us</a>
+          <a href="support.html">Support</a>
+        </nav>
+        <div class="action-group">
+          <a class="nav-cta dark" href="get-started.html">Get Started</a>
+          <a class="nav-cta solid" href="login.html">Login</a>
+        </div>
+      </header>
+
+      <main class="page-main quote-page">
+        <section class="quote-intro">
+          <span class="eyebrow">COURIER | LOGISTICS | FREIGHT</span>
+          <h1>Request a quote</h1>
+          <p>Enter your contact details and delivery route, then add a package photo.</p>
+        </section>
+
+        <form class="quote-form" id="quote-request-form">
+          <div class="quote-fields">
+            <div class="form-row">
+              <label for="quote-name">Full name *</label>
+              <input id="quote-name" name="name" type="text" autocomplete="name" maxlength="120" required />
+            </div>
+            <div class="form-row">
+              <label for="quote-email">Email address *</label>
+              <input id="quote-email" name="email" type="email" autocomplete="email" maxlength="254" required />
+            </div>
+            <div class="form-row">
+              <label for="quote-phone">Contact number *</label>
+              <input id="quote-phone" name="phone" type="tel" autocomplete="tel" maxlength="40" required />
+            </div>
+            <div class="form-row">
+              <label for="quote-origin">Pickup point *</label>
+              <input id="quote-origin" name="origin" type="text" maxlength="200" required />
+            </div>
+            <div class="form-row">
+              <label for="quote-destination">Destination *</label>
+              <input id="quote-destination" name="destination" type="text" maxlength="200" required />
+            </div>
+            <div class="form-row quote-photo-field">
+              <label for="quote-package-photo">Attach a picture of the package *</label>
+              <input id="quote-package-photo" name="packagePhoto" type="file" accept="image/jpeg,image/png,image/webp" required />
+              <small>JPG, PNG, or WebP · maximum 8 MB</small>
+              <span id="quote-photo-name" class="quote-photo-name">No picture selected</span>
+              <img id="quote-photo-preview" class="quote-photo-preview" alt="Package photo preview" hidden />
+            </div>
+          </div>
+
+          <div class="quote-terms">
+            <p><strong>Quote request:</strong> This request is not a final quotation or confirmed booking. Nyamira Express will review the delivery details and confirm pricing and availability.</p>
+          </div>
+
+          <div class="quote-submit">
+            <div class="quote-action-buttons">
+              <button type="submit" class="primary-btn large-btn" id="quote-submit-button">Quote on WhatsApp</button>
+              <button type="button" class="secondary-btn large-btn" id="quote-email-button">Quote on Email</button>
+            </div>
+            <p id="quote-request-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="brand-wrap footer-brand-wrap">
+              <div class="logo-mark" aria-hidden="true"><img src="images/logo-cropped.png" alt="" /></div>
+              <div class="brand-copy footer-copy"><div class="brand-name">Nyamira Express (McArek International)</div></div>
+            </div>
+            <p>Fast, dependable delivery for businesses and households.</p>
+          </div>
+          <div class="footer-column"><h5>Contact</h5><ul><li>7 Duvenhage Avenue, Edleen, Kempton Park</li><li>074 444 0102</li><li>info@nyamilaexpress.co.za</li></ul></div>
+        </div>
+      </footer>
+    </div>
+    <script src="quote.js"></script>
+  </body>
+</html>

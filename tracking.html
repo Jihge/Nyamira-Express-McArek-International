@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Shipment | Nyamira Express (McArek International)</title>
+    <meta name="description" content="Look up your Nyamira Express (McArek International) delivery request or booking status by reference." />
+    <link rel="stylesheet" href="styles.css?v=21" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand-wrap" aria-label="Nyamira Express brand">
+          <div class="logo-mark" aria-hidden="true"><img src="images/logo-cropped.png" alt="" /></div>
+          <div class="brand-copy">
+            <div class="brand-name">Nyamira Express (McArek International)</div>
+          </div>
+        </div>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="tracking.html" class="active">Tracking</a>
+          <a href="coverage.html">Coverage</a>
+          <a href="about.html">About Us</a>
+          <a href="support.html">Support</a>
+        </nav>
+
+        <div class="action-group">
+          <a class="nav-cta dark" href="get-started.html">Get Started</a>
+          <a class="nav-cta solid" href="login.html">Login</a>
+        </div>
+      </header>
+
+      <main class="page-main inner-page">
+        <section class="page-hero auto-slider" data-auto-slider>
+          <div class="slider-track">
+            <div class="slider-slide active" style="background-image: url('images/tracking-route.jpg');">
+              <div class="slider-content">
+                <div class="page-hero-copy">
+                  <span class="eyebrow">TRACKING</span>
+                  <h1>Check your delivery status by reference.</h1>
+                </div>
+              </div>
+            </div>
+            <div class="slider-slide" style="background-image: url('images/services-delivery.jpg');">
+              <div class="slider-content">
+                <div class="page-hero-copy">
+                  <span class="eyebrow">REQUEST STATUS</span>
+                  <h1>See whether your delivery request or booking has been submitted.</h1>
+                </div>
+              </div>
+            </div>
+            <div class="slider-slide" style="background-image: url('images/coverage-map.jpg');">
+              <div class="slider-content">
+                <div class="page-hero-copy">
+                  <span class="eyebrow">BOOKING STATUS</span>
+                  <h1>Use your delivery reference to find your latest saved status.</h1>
+                </div>
+              </div>
+            </div>
+            <div class="slider-slide" style="background-image: url('images/about-logistics.jpg');">
+              <div class="slider-content">
+                <div class="page-hero-copy">
+                  <span class="eyebrow">NEXT STEPS</span>
+                  <h1>Get the current request status and know what to do next.</h1>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-dots" aria-label="Slide navigation">
+            <span class="slider-dot active"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+            <span class="slider-dot"></span>
+          </div>
+        </section>
+
+        <section class="info-section tracking-panel">
+          <div class="tracking-visual-card" aria-label="Shipment tracking illustration">
+            <div class="tracking-badge">Reference Tracking</div>
+            <img
+              id="tracking-visual"
+              src="images/tracking-route.jpg"
+              alt="Illustration of a courier truck travelling on a delivery route"
+            />
+              <div class="tracking-visual-overlay">
+              <span>Delivery progress</span>
+              <strong>Shipment status</strong>
+            </div>
+          </div>
+
+          <div class="tracking-stack">
+            <form class="tracking-form" id="tracking-form">
+              <label for="tracking-code">Shipment reference</label>
+              <div class="tracking-row">
+                <input id="tracking-code" name="code" type="text" placeholder="e.g. NE-ABC123" autocomplete="off" maxlength="24" required />
+                <button type="submit" class="primary-btn">Track</button>
+              </div>
+            </form>
+
+            <div class="tracking-result" id="tracking-result" aria-live="polite">
+              <div class="status-pill tracking-state" id="tracking-state">Ready to track</div>
+              <h3 id="tracking-title">Enter your delivery reference</h3>
+              <p id="tracking-last-update">Your saved request or booking status will appear here.</p>
+              <p id="tracking-route" class="tracking-route" hidden></p>
+              <ul id="tracking-milestones">
+              </ul>
+              <p class="tracking-limit-note">This page shows request and booking messages prepared in this browser. It does not confirm that a WhatsApp message was sent or provide live courier updates. Shared tracking across devices requires a Nyamira Express tracking system.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="brand-wrap footer-brand-wrap">
+              <div class="logo-mark" aria-hidden="true"><img src="images/logo-cropped.png" alt="" /></div>
+              <div class="brand-copy footer-copy">
+                  <div class="brand-name">Nyamira Express (McArek International)</div>
+              </div>
+            </div>
+            <p>Fast, dependable delivery for businesses and households.</p>
+            <div class="socials" aria-label="Social media links">
+              <span>f</span>
+              <span>in</span>
+              <span>x</span>
+              <span>◎</span>
+            </div>
+          </div>
+
+          <div class="footer-column">
+            <h5>Services</h5>
+            <ul>
+              <li>Domestic Courier</li>
+              <li>Door-to-Door Delivery</li>
+              <li>Freight &amp; Cargo</li>
+              <li>Air Shipping</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5>Company</h5>
+            <ul>
+              <li>About Us</li>
+              <li>Coverage Area</li>
+              <li>FAQ</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+
+          <div class="footer-column">
+            <h5>Support</h5>
+            <ul>
+              <li>Track Shipments</li>
+              <li>Shipment Enquiry</li>
+            </ul>
+          </div>
+
+          <div class="footer-column contact-col">
+            <h5>Contact Us</h5>
+            <ul>
+              <li>7 Duvenhage Avenue,<br />Edleen, Kempton Park</li>
+              <li>074 444 0102</li>
+              <li>info@nyamilaexpress.co.za</li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="page-slider.js"></script>
+    <script src="tracking.js?v=3"></script>
+    <script src="bot.js"></script>
+  </body>
+</html>

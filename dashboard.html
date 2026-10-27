@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Nyamira Express (McArek International)</title>
+    <meta name="description" content="View delivery requests saved in this browser for Nyamira Express (McArek International)." />
+    <link rel="stylesheet" href="styles.css?v=21" />
+  </head>
+  <body>
+    <div class="page-shell dashboard-shell">
+      <header class="topbar dashboard-topbar">
+        <div class="brand-wrap" aria-label="Nyamira Express brand">
+          <div class="logo-mark" aria-hidden="true"><img src="images/logo-cropped.png" alt="" /></div>
+          <div class="brand-copy">
+            <div class="brand-name">Nyamira Express (McArek International)</div>
+          </div>
+        </div>
+
+        <div class="action-group">
+          <a class="nav-cta dark" href="login.html">Log out</a>
+          <a class="nav-cta solid" href="support.html">Support</a>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+        <section class="dashboard-heading">
+          <div>
+            <span class="dashboard-kicker">CUSTOMER PORTAL / OVERVIEW</span>
+            <h1>Good morning, Nandi</h1>
+            <p>Requests saved in this browser appear here. This dashboard does not show live courier updates.</p>
+          </div>
+        </section>
+
+        <section class="dashboard-metrics" aria-label="Shipment account summary">
+          <article class="metric-item">
+            <span class="metric-mark blue" aria-hidden="true">↗</span>
+            <div><span>Saved delivery requests</span><strong id="metric-requests">0</strong><small>In this browser</small></div>
+          </article>
+          <article class="metric-item">
+            <span class="metric-mark cyan" aria-hidden="true">◷</span>
+            <div><span>Awaiting a response</span><strong id="metric-awaiting">0</strong><small>Request messages prepared</small></div>
+          </article>
+          <article class="metric-item">
+            <span class="metric-mark green" aria-hidden="true">✓</span>
+            <div><span>Booking messages</span><strong id="metric-bookings">0</strong><small>Prepared to send</small></div>
+          </article>
+          <article class="metric-item">
+            <span class="metric-mark amber" aria-hidden="true">⌖</span>
+            <div><span>Receiving requests</span><strong id="metric-receiving">0</strong><small>Goods coming to you</small></div>
+          </article>
+        </section>
+
+        <section class="dashboard-feature" aria-label="Latest saved shipment" hidden>
+          <img id="shipment-visual" src="images/tracking-route.jpg" alt="Nyamira Express (McArek International) courier truck travelling on a delivery route" />
+          <div class="feature-shade"></div>
+          <div class="feature-content">
+            <span class="feature-status"><i></i> <span id="shipment-status"></span></span>
+            <span class="feature-reference" id="shipment-reference"></span>
+            <h2 id="shipment-headline"></h2>
+            <p><span id="shipment-origin"></span> <span aria-hidden="true">→</span> <span id="shipment-destination"></span> <span class="feature-divider">|</span> <span id="shipment-eta"></span></p>
+          </div>
+          <a class="feature-link" id="feature-track-link" href="tracking.html">Track shipment <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section class="dashboard-lower">
+          <div class="dashboard-section shipments-section" id="recent-shipments">
+            <div class="dashboard-section-heading">
+              <div><span class="section-kicker">YOUR ACTIVITY</span><h2>Recent shipments</h2></div>
+              <a href="tracking.html">Track by reference <span aria-hidden="true">→</span></a>
+            </div>
+            <p id="dashboard-storage-warning" role="alert" hidden></p>
+            <div class="shipment-table-wrap">
+              <table class="shipment-table">
+                <thead><tr><th>Reference</th><th>Destination</th><th>Last updated</th><th>Status</th><th></th></tr></thead>
+                <tbody id="shipment-rows">
+                  <tr><td colspan="5">No delivery requests are saved in this browser yet.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <aside class="dashboard-section shortcuts-section">
+            <div class="dashboard-section-heading">
+              <div><span class="section-kicker">GET THINGS MOVING</span><h2>Quick links</h2></div>
+            </div>
+            <a class="shortcut-link" href="quote.html"><span class="shortcut-icon">＋</span><span><strong>Get a quote</strong><small>Prepare a delivery quote request</small></span><b aria-hidden="true">→</b></a>
+            <a class="shortcut-link" href="quote.html#quote-request-form"><span class="shortcut-icon">↗</span><span><strong>Book a pickup</strong><small>Include pickup details in your quote request</small></span><b aria-hidden="true">→</b></a>
+            <a class="shortcut-link" href="services.html"><span class="shortcut-icon">◇</span><span><strong>Explore services</strong><small>Review delivery options</small></span><b aria-hidden="true">→</b></a>
+            <a class="shortcut-link" href="coverage.html"><span class="shortcut-icon">⌖</span><span><strong>Service coverage</strong><small>Check delivery locations</small></span><b aria-hidden="true">→</b></a>
+            <a class="shortcut-link" href="support.html"><span class="shortcut-icon">?</span><span><strong>Contact support</strong><small>We are here to help</small></span><b aria-hidden="true">→</b></a>
+          </aside>
+        </section>
+      </main>
+
+      <footer class="site-footer dashboard-footer">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="brand-wrap footer-brand-wrap">
+              <div class="logo-mark" aria-hidden="true"><img src="images/logo-cropped.png" alt="" /></div>
+              <div class="brand-copy footer-copy"><div class="brand-name">Nyamira Express (McArek International)</div></div>
+            </div>
+            <p>Dependable delivery for businesses and households.</p>
+          </div>
+          <div class="footer-column"><h5>Shipments</h5><ul><li><a href="quote.html#quote-request-form">Request a quote and pickup</a></li><li><a href="tracking.html">Track a shipment</a></li></ul></div>
+          <div class="footer-column"><h5>Support</h5><ul><li><a href="support.html">Contact support</a></li><li><a href="services.html">Explore services</a></li></ul></div>
+          <div class="footer-column"><h5>Account</h5><ul><li><a href="login.html">Log out</a></li><li><a href="index.html">Nyamira Express (McArek International) home</a></li></ul></div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="dashboard.js"></script>
+    <script src="bot.js"></script>
+  </body>
+</html>
